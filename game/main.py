@@ -6,7 +6,8 @@ screen = pygame.display.set_mode((800,400))
 pygame.display.set_caption('Pixel Runner')
 clock = pygame.time.Clock()
 
-sky_surface = pygame.image.load('graphics/Sky.png')
+sky_surface = pygame.image.load('Graphics/Sky.png')
+ground_surface = pygame.image.load('Graphics/ground.png')
 
 
 while True:
@@ -15,7 +16,8 @@ while True:
             pygame.quit()
             exit()
 
-    screen.blit(sky_surface,(200,100))
+    screen.blit(sky_surface,(0,0))
+    screen.blit(ground_surface,(0,300))
 
     pygame.display.update()
     clock.tick(60)
